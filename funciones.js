@@ -16,6 +16,16 @@ function sumar1(a, b) {
   return a + b;
 }
 console.log(sumar1(20, 20));
+//forma 3 ingresando nosotros mismo los numeros por pantalla
+
+// let n1 = parseInt(prompt("ingrese su numero1"));
+
+// let n2 = parseInt(prompt("ingrese su numero2"));
+
+// function sumar2() {
+//   return console.log(n1 + n2);
+// }
+// sumar2();
 
 //ejercicio 2
 //Realiza una funcion que dado 3 numeros, corrobore si la multiplicacion de los 2 primeros es igual al tercer numero
@@ -46,14 +56,13 @@ console.log(
 
 //ejercicio 5 concatenacion
 //realiza una funcion que imprima un saludo con el nombre y apellido
-function saludo(nombre, apellido) {
-  return "¡Buen día" + " " + nombre + apellido + "!";
-}
-console.log(saludo("diego", "pico"));
+// function saludo(nombre, apellido) {
+//   return "¡Buen día" + " " + nombre + apellido + "!";
+// }
+// console.log(saludo("diego", "pico"));
 
 //ejercicio 6
-//ingreso de datos
-//tomar la funcion anterior pero hacer con ingreso de dato por promt
+//tomar la funcion anterior pero hacer con ingreso de dato por pantalla
 
 // let nombre1 = prompt("ingrese su nombre");
 // let apellido1 = prompt("ingrese su apellido");
@@ -93,25 +102,70 @@ console.log(saludo("diego", "pico"));
 // contar("");
 
 //ejercicio 8
-//crea una funcion para contar el numero de veces que se repite una palabra  en un texto ej oh bela chau chau chau  el resultado sera 3
+//crea una funcion para contar el numero de veces que se repite una palabra  en un texto ej oh bela chau chau chau  el resultado para chau sera 3
 
-// const repeticion = (texto ="", rep) =>{
-// (!texto)? console.log("no ingresaste texto")
-// }
+// const repeticion = (cadena = "", texto = "") => {
+//   if (!cadena) return console.log("no ingresaste texto largo");
+//   if (!texto) return console.log("no ingresaste palabra");
+//vamos a iniciar una variable para usarla como contador y con la variable i vamos a controlar ese contador
+// let i = 0;
+// let contador = 0;
+//vamos a usar un while y no un doWhile por que el doWhile ejecuta aunque sea 1 vez el codigo y el indexOf que nos permite controlar un texto dentro de otra cadena de texto y nos devolvera la posicion donde encontro ese texto o caracter
+//por que ejecutamos el while con la condicion -1 por que el indexOf si no encuentra el texto a buscar devuelve -1
+
+//   while (i !== -1) {
+//     i = cadena.indexOf(texto, i);
+//     if (i !== -1) {
+//       i++;
+//       contador++;
+//     }
+//   }
+//   return console.log(`la palabra ${texto} se repite ${contador} veces`);
+// };
+
+// repeticion("hola");
+// repeticion("", "d");
+// repeticion("hola mundo chao mundo hello mundo sayonara mundo", "mundo");
 
 //ejercicio 9
 // crea una funcion que invierta las palabras de una cadena de texto ejemplo "hola" resultado será aloh
 
-function invertir(cadena) {
-  return cadena.split("").reverse().join("");
-}
-console.log(invertir("hola"));
+// function invertir(cadena) {
+//   return cadena.split("").reverse().join("");
+// }
+// console.log(invertir("hola"));
 
-const invertir2 = (cadena) => {
-  cadena
-    ? console.log(cadena.split("").reverse().join(""))
-    : console.log("no ingresaste nada");
-};
-console.log(invertir2(""));
+// const invertir2 = (cadena) => {
+//   cadena
+//     ? console.log(cadena.split("").reverse().join(""))
+//     : console.log("no ingresaste nada");
+// };
+// console.log(invertir2(""));
+
 //ejercicio 10
-//crea una funcion que valide si una palabra dada, es un palíndromo (capicua q se lee de igual sentido que en otro) ejemplo paap
+//crea una funcion que valide si una palabra dada, es un palíndromo (capicua q se lee de igual sentido que en otro) ejemplo salas
+// vamos a explicar lo que usamos palabra.split para convertirla en un arreglo no le damos espacio para que cada caracter sea 1 posicion luego usamos el metodo reverse() y luego volvemos a unir para que vuelva a ser una sola palabra con el .join("") tampoco le pasamos un separador
+// const palin = (palabra) => {
+//   palabra === palabra.split("").reverse().join("")
+//     ? console.log(`la palabra ${palabra} es palíndromo `)
+//     : console.log("no es palindromo");
+// };
+// palin("paap");
+
+//11  programa una funcion que elimine cierto patron de caracteres de un teto dado ejemplo (abc1, abc2, abc3, abc4) y tiene que devolver "1, 2, 3, 4"
+
+//lo vamos a resolver con una funcion anonima
+//vamos a usar replace
+
+// const eliminarCaracteres = (texto = "", patron = "") => {
+//   !texto
+//     ? console.log("no ingresaste texto")
+//     : !patron
+//     ? console.log("no ingresaste un patron de caracteres")
+//     : console.log(texto.replace(new RegExp(patron, "ig"), ""));
+// };
+//con replace reemplazamos y tenemos que pasar 2 parametros el 1 el parametro que queremos analizar y el 2 el parametro que queremos que reemplace al 1. si no queremos eliminarlo que no aparezca nada simplemente le dejamos "" vacio. El primer parametro vamos a hacer una expresion regular
+//new regExp creamos  una instancia de un objeto de tipo expresion regular para que evalue el patron a buscar y vamos a pasarle las banderas ig (i=evita que distinga entre mayus y minusculas y g= no se detiene en la primera considencia)
+// eliminarCaracteres();
+// eliminarCaracteres("abc1");
+// eliminarCaracteres("abc1, abc2, abc3, abc4", "ab");
