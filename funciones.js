@@ -154,7 +154,6 @@ console.log(
 
 //11  programa una funcion que elimine cierto patron de caracteres de un teto dado ejemplo (abc1, abc2, abc3, abc4) y tiene que devolver "1, 2, 3, 4"
 
-//lo vamos a resolver con una funcion anonima
 //vamos a usar replace
 
 // const eliminarCaracteres = (texto = "", patron = "") => {
@@ -165,7 +164,38 @@ console.log(
 //     : console.log(texto.replace(new RegExp(patron, "ig"), ""));
 // };
 //con replace reemplazamos y tenemos que pasar 2 parametros el 1 el parametro que queremos analizar y el 2 el parametro que queremos que reemplace al 1. si no queremos eliminarlo que no aparezca nada simplemente le dejamos "" vacio. El primer parametro vamos a hacer una expresion regular
-//new regExp creamos  una instancia de un objeto de tipo expresion regular para que evalue el patron a buscar y vamos a pasarle las banderas ig (i=evita que distinga entre mayus y minusculas y g= no se detiene en la primera considencia)
+//new regExp creamos  una instancia de un objeto de tipo expresion regular para que evalue el patron a buscar y vamos a pasarle las banderas ig (i=evita que distinga entre mayus y minusculas y g= no se detiene en la primera coincidencia)
 // eliminarCaracteres();
 // eliminarCaracteres("abc1");
 // eliminarCaracteres("abc1, abc2, abc3, abc4", "ab");
+
+//12 tenemos una url y necesitamos el ultimo valor ejemplo "https:/www.api.com/people/9/"" queremos acceder al id 9
+// lo primero sera convertir con el metodo split a un arreglo (array) separado por el caracter que pongamos entre los parentesis en este casi la /, luego si queremos el ultimo elemento le agregamos un pop() pero si usamos un .slice nos devolvera un array segun lo q introduzcamos por argumento ("") en este caso a tener -2 (nos devolvera un array de 2 posiciones y las 2 ultimas) en el primer argumento nos devuelve "9 y un espacio vacio" el 9 esta en la posicion 0 asi que igualamos en el 2 argumento con [ la posicion 0]
+// const url = "https:/www.api.com/people/9/5";
+
+// function getId(data) {
+//   return data.split("/").slice(-2)[0];
+// }
+// console.log(getId(url));
+
+// function getID1(data) {
+//   return data.split("/").slice(-3)[1];
+// }
+// console.log(getID1(url));
+
+//
+
+//Metodos  varios
+
+//const metodos = ["pera", "manzana", "uva", "sandia"];
+// const metodosString = "Una cadena de texto";
+//function met(data) {
+// return data.join("/*"); // devuelve una cadena de texto si dejamos espacios dara espacios si no todo junto depende que pasemos por parametro
+//return data.slice(1); //recorta desde la posicion que indiquemos en este caso recorta desde la posicion 1 quedaria manzana uva sandia
+//return data.pop(); //tra el ultimo elemento en este caso sandia
+//return data.split(""); //transforma una cadena de texto en array si no damos espacio es un array de 1 posicion si damos espacios cada caracter sera una posicion
+//return data.join(","); //transforma un array en cadena de texto si no le damos espacios sera todo una sola cosa podemos pasar parametros dentro de los ( )
+//}
+
+//console.log(met(metodos));
+// console.log(met(metodosString));
