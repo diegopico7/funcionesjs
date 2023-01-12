@@ -38,21 +38,21 @@ console.log(numeros(2, 3, 4));
 ////ejercicio 3
 //realiza una funcion que dado 3 parametros los sume y devuelva su promedio
 
-function promedio(a, b, c) {
-  return (a + b + c) / 3;
-}
-console.log(promedio(3, 6, 1));
+// function promedio(a, b, c) {
+//   return (a + b + c) / 3;
+// }
+// console.log(promedio(3, 6, 1));
 
-//ejercicio 4
-//Calcular el porcentaje de capacidad de un estadio. Pasando por parámetro la capacidad y los asistentes.
+// //ejercicio 4
+// //Calcular el porcentaje de capacidad de un estadio. Pasando por parámetro la capacidad y los asistentes.
 
-function estadio(capacidad, asistentes) {
-  return (asistentes * 100) / capacidad;
-}
+// function estadio(capacidad, asistentes) {
+//   return (asistentes * 100) / capacidad;
+// }
 
-console.log(
-  "la capacidad del estadio esta cubierta en un " + estadio(50000, 25000) + "%"
-);
+// console.log(
+//   "la capacidad del estadio esta cubierta en un " + estadio(50000, 25000) + "%"
+// );
 
 //ejercicio 5 concatenacion
 //realiza una funcion que imprima un saludo con el nombre y apellido
@@ -152,7 +152,7 @@ console.log(
 // };
 // palin("paap");
 
-//11  programa una funcion que elimine cierto patron de caracteres de un teto dado ejemplo (abc1, abc2, abc3, abc4) y tiene que devolver "1, 2, 3, 4"
+//11  programa una funcion que elimine cierto patron de caracteres de un texto dado ejemplo (abc1, abc2, abc3, abc4) y tiene que devolver "1, 2, 3, 4"
 
 //vamos a usar replace
 
